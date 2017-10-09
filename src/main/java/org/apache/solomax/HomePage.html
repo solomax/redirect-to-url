@@ -17,8 +17,17 @@
 			<p>
 				Please mention the correct Wicket version: <wicket:container wicket:id="version">1.5-SNAPSHOT</wicket:container>.
 			</p>
-			<form wicket:id="form">
-				<button wicket:id="oauthBtn"><span wicket:id="label"></span></button>
+			<form wicket:id="form1">
+				<button wicket:id="oauthBtn1"><span wicket:id="label"></span></button>
+				<button wicket:id="oauthBtn2"><span wicket:id="label"></span></button>
+			</form>
+			<br/>
+			<br/>
+			<h3>Button inside list view</h3>
+			<form wicket:id="form2">
+				<div wicket:id="list">
+					<button wicket:id="oauthBtn"><span wicket:id="label"></span></button>
+				</div>
 			</form>
 		</div>
 		<div id="ft">

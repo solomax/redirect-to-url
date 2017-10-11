@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import org.apache.wicket.ajax.AjaxEventBehavior;
 import org.apache.wicket.ajax.AjaxRequestTarget;
+import org.apache.wicket.markup.html.WebMarkupContainer;
 import org.apache.wicket.markup.html.WebPage;
 import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.form.Button;
@@ -32,6 +33,15 @@ public class HomePage extends WebPage {
 						throw new RedirectToUrlException("https://google.com");
 					}
 			}))
+			.add(new WebMarkupContainer("oauthDiv1").add(new Label("label", "Ajax Redirect to Google"))
+					.add(new AjaxEventBehavior("click") {
+						private static final long serialVersionUID = 1L;
+
+						@Override
+						protected void onEvent(AjaxRequestTarget target) {
+							throw new RedirectToUrlException("https://google.com");
+						}
+				}))
 			.add(new Button("oauthBtn2") {
 				private static final long serialVersionUID = 1L;
 
